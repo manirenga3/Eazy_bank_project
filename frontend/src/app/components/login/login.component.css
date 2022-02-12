@@ -1,0 +1,44 @@
+body {
+  background-color: #535fe6;
+}
+
+.height {
+  height: 100vh;
+}
+
+.card {
+  border: none;
+  padding: 20px;
+  background-color: #1c1e21;
+  color: #fff;
+}
+
+.form-input {
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+ion-icon {
+  color: black;
+  position: absolute;
+  font-size: 18px;
+  top: 15px;
+  left: 10px;
+}
+
+.form-control {
+  height: 50px;
+  text-indent: 24px;
+  font-size: 15px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 2px solid #4f63e7;
+}
+
+.login {
+  height: 50px;
+  font-size: 14px;
+}

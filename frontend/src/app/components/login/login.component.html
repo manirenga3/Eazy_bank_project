@@ -1,0 +1,63 @@
+<div class="container mt-5 mb-5">
+  <div class="row d-flex align-items-center justify-content-center">
+    <div class="col-md-6">
+      <div class="card px-5 py-5">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="form-input">
+            <ion-icon src="../../../assets/icons/mail.svg"></ion-icon>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email address"
+              ngModel
+              name="email"
+              #email="ngModel"
+              required
+              email
+            />
+            <span
+              class="text-danger"
+              *ngIf="email.touched && email.errors?.required"
+              >Email is required !</span
+            >
+            <span
+              class="text-danger"
+              *ngIf="email.touched && email.errors?.email"
+              >Enter a valid email !</span
+            >
+          </div>
+          <div class="form-input">
+            <ion-icon src="../../../assets/icons/lock-closed.svg"></ion-icon>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              ngModel
+              name="password"
+              #password="ngModel"
+              required
+            />
+            <span
+              class="text-danger"
+              *ngIf="password.touched && password.errors?.required"
+              >Password is required !</span
+            >
+          </div>
+          <div class="form-input">
+            <button
+              type="submit"
+              class="form-control btn btn-primary mt-4 login"
+              [disabled]="!f.valid"
+            >
+              SIGN IN
+            </button>
+          </div>
+          <div class="text-center mt-4">
+            <span>Don't have account?</span>&nbsp;
+            <a class="text-decoration-none">Sign Up Now</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
